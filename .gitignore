@@ -1,0 +1,6 @@
+# Local config file
+.env
+canteens.json
+
+# Local dependencies
+node_modules
