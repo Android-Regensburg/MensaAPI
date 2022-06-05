@@ -78,7 +78,7 @@ class WeekMenuResponse extends ResponseWrapper {
         let data = {};
         data['Monday'] = `${process.env.BASE_URL}/${this.location}/${this.canteen}/Monday`;
         data['Tuesday'] = `${process.env.BASE_URL}/${this.location}/${this.canteen}/Tuesday`;
-        data['Wednesday'] = `${process.env.BASE_URL}a/${this.location}/${this.canteen}/Wednesday`;
+        data['Wednesday'] = `${process.env.BASE_URL}/${this.location}/${this.canteen}/Wednesday`;
         data['Thursday'] = `${process.env.BASE_URL}/${this.location}/${this.canteen}/Thursday`;
         data['Friday'] = `${process.env.BASE_URL}/${this.location}/${this.canteen}/Friday`;
         return data;
