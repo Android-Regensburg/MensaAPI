@@ -28,10 +28,7 @@ function getDayFromShortcut(shortcut) {
 function createDishesFromLines(lines) {
     let validLines = lines.filter((line) => {
         let columns = line.split(process.env.CSV_DELIMITER);
-        if (columns.length === process.env.CSV_COLUMN_COUNT) {
-            return true;
-        }
-        return false;
+        return (columns.length === parseInt(process.env.CSV_COLUMN_COUNT));
     });
     return validLines.map((line) => {
         let columns = line.split(process.env.CSV_DELIMITER),
