@@ -34,10 +34,10 @@ class RestServer {
     constructor() {
         this.port = process.env.PORT;
         this.app = express();
-        this.app.get("/mensa", onLocationListRequested);
-        this.app.get("/mensa/:location", onCanteenListRequested);
-        this.app.get("/mensa/:location/:canteen", onWeekMenuRequested);
-        this.app.get("/mensa/:location/:canteen/:day", onDayMenuRequested);
+        this.app.get("/", onLocationListRequested);
+        this.app.get("/:location", onCanteenListRequested);
+        this.app.get("/:location/:canteen", onWeekMenuRequested);
+        this.app.get("/:location/:canteen/:day", onDayMenuRequested);
     }
 
     setCanteenData(canteens) {
